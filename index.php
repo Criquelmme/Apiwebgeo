@@ -1,9 +1,9 @@
 <?php
 
-$nombre = $_GET['nombre'];
+$nombre = $_POST['nombre'];
 
 echo $nombre;
-echo "llego1112";
+echo "si";
 
 
 if($json != null){
