@@ -1,9 +1,11 @@
 <?php
 
-echo htmlspecialchars($_POST['login']);
-echo "llego1";
-echo $json;
-echo "llego2";
+$nombre = $_POST['nombre'];
+
+echo $nombre;
+echo "llego11";
+
+
 if($json != null){
       $data = json_decode($json);
       print_r($data);
