@@ -39,6 +39,8 @@ if($login != null){
       //   echo json_encode($userData);
         
 
+}else{
+      echo "no data";
 }
 
 
