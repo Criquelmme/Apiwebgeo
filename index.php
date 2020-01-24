@@ -2,6 +2,7 @@
 
 $json = file_get_contents('php://input');
 echo "llego";
+echo $json;
 if($json != null){
       $data = json_decode($json);
       print_r($data);
