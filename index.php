@@ -2,7 +2,7 @@
 $DBuser = "Claudio@mysqlmobilgeoapp";
 $DBpass = "Xxed9210";  
 $DBhost = "mysqlmobilgeoapp.mysql.database.azure.com";
-$DBname = "appgeo";
+$DBname = "cpr52313_test_usr";
 
 
 try{
