@@ -1,8 +1,9 @@
 <?php
-$DBuser = "cpr52313_test";
-$DBpass = "ppopxxed";  // en mi caso tengo contraseña pero en casa caso introducidla aquí.
-$DBhost = "localhost";
-$DBname = "cpr52313_test_usr";
+$DBuser = "Claudio@mysqlmobilgeoapp";
+$DBpass = "xxed9210";  
+$DBhost = "mysqlmobilgeoapp.mysql.database.azure.com";
+$DBname = "appgeo";
+
 
 try{
   
