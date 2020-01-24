@@ -1,7 +1,7 @@
 <?php
 
 $json = $_POST["login"];
-echo "llego";
+echo "llego1";
 echo $json;
 if($json != null){
       $data = json_decode($json);
