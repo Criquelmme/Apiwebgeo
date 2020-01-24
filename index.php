@@ -1,12 +1,12 @@
 <?php
 
-$nombre = $_POST['nombre'];
+$login = $_POST['login'];
 
-echo $nombre;
-echo "si";
+echo $login;
 
 
-if($json != null){
+
+if($login != null){
       $data = json_decode($json);
       print_r($data);
     
