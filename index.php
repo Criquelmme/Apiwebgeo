@@ -1,10 +1,11 @@
 <?php
 
 $json = file_get_contents('php://input');
-
+echo "llego";
 if($json != null){
       $data = json_decode($json);
       print_r($data);
+    
       // $DBuser = "Claudio@mysqlmobilgeoapp";
       // $DBpass = "Xxed9210";  
       // $DBhost = "mysqlmobilgeoapp.mysql.database.azure.com";
