@@ -1,6 +1,6 @@
 <?php
 
-$json = file_get_contents('php://input');
+$json = $_POST["login"];
 echo "llego";
 echo $json;
 if($json != null){
