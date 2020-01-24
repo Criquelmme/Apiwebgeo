@@ -1,6 +1,6 @@
 <?php
 
-$nombre = $_POST['nombre'];
+$nombre = $_GET['nombre'];
 
 echo $nombre;
 echo "llego11";
