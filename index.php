@@ -3,7 +3,7 @@
 $nombre = $_GET['nombre'];
 
 echo $nombre;
-echo "llego11";
+echo "llego1112";
 
 
 if($json != null){
