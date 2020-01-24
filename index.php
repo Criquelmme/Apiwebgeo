@@ -1,6 +1,6 @@
 <?php
 $DBuser = "Claudio@mysqlmobilgeoapp";
-$DBpass = "xxed9210";  
+$DBpass = "Xxed9210";  
 $DBhost = "mysqlmobilgeoapp.mysql.database.azure.com";
 $DBname = "appgeo";
 
