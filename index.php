@@ -12,11 +12,11 @@ $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
       if($_SERVER["REQUEST_METHOD"] == "POST") {
          // username and password sent from form 
          
-         $myusername = mysqli_real_escape_string($db,$_POST['usuario']);
-         $mypassword = mysqli_real_escape_string($db,$_POST['pass']); 
+         $myusername = mysqli_real_escape_string($_POST['usuario']);
+         $mypassword = mysqli_real_escape_string($_POST['pass']); 
       
          $sql = "SELECT id FROM admin WHERE usuario = '$myusername' and contrasena = '$mypassword'";
-         echo $_POST['usuario'];
+         echo $sql;
          $result = mysqli_query($db,$sql);
          $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
          $active = $row['active'];
