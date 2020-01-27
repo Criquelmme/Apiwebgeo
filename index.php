@@ -1,42 +1,39 @@
 <?php
 
-$usuario = $_POST["usuario"];
-$pass = $_POST["pass"];
-if($usuario != null){
-    
+define('DB_SERVER', 'lmysqlmobilgeoapp.mysql.database.azure.com');
+define('DB_USERNAME', 'Claudio@mysqlmobilgeoapp');
+define('DB_PASSWORD', 'Xxed9210');
+define('DB_DATABASE', 'cpr52313_test_usr');
+$db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 
-      $DBuser = "Claudio@mysqlmobilgeoapp";
-      $DBpass = "Xxed9210";  
-      $DBhost = "mysqlmobilgeoapp.mysql.database.azure.com";
-      $DBname = "cpr52313_test_usr";
-      try{
-  
-            $DBcon = new PDO("mysql:host=$DBhost;dbname=$DBname",$DBuser,$DBpass);
-            $DBcon->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            
-           }catch(PDOException $ex){
-            
-            die($ex->getMessage());
-           }
-        $query = "SELECT * FROM usuarios where usuario = '$usuario' and contrasena = '$pass'";
-         
-        $stmt = $DBcon->prepare($query);
-        $stmt->execute();
-        
    
-        
-        $count = mysqli_num_rows($stmt);
-        echo $count;
-        
-      //   if($userData => 0 ){
-      //       echo true;
+      session_start();
+   
+      if($_SERVER["REQUEST_METHOD"] == "POST") {
+         // username and password sent from form 
+         
+         $myusername = mysqli_real_escape_string($db,$_POST['usuario']);
+         $mypassword = mysqli_real_escape_string($db,$_POST['pass']); 
+         
+         $sql = "SELECT id FROM admin WHERE usuario = '$myusername' and contrasena = '$mypassword'";
+         $result = mysqli_query($db,$sql);
+         $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+         $active = $row['active'];
+         
+         $count = mysqli_num_rows($result);
+         
+         // If result matched $myusername and $mypassword, table row must be 1 row
+               
+         if($count == 1) {
+            session_register("myusername");
+            $_SESSION['login_user'] = $myusername;
 
-      //   }else{echo false;}
-        
+         }else {
+            $error = "Your Login Name or Password is invalid";
+         }
+      }
         
 
-}else{
-      echo "no data";
-}
+
 
 
