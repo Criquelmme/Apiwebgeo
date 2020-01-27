@@ -1,6 +1,6 @@
 <?php
 
-$login = $_POST['application/json'];
+$login = $_POST['login'];
 
 echo $login;
 
