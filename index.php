@@ -33,8 +33,12 @@ if($login != null){
               $userData = $row;
          
         }
+        echo $userData;
+      //   if($userData => 0 ){
+      //       echo true;
+
+      //   }else{echo false;}
         
-        echo json_encode($userData);
         
 
 }else{
