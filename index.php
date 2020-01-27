@@ -33,7 +33,9 @@ if($login != null){
               $userData = $row;
          
         }
-        echo $userData;
+        echo $userData[1];
+        echo $userData[2];
+        
       //   if($userData => 0 ){
       //       echo true;
 
