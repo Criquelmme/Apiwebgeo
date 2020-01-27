@@ -16,7 +16,7 @@ $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
          $mypassword = mysqli_real_escape_string($db,$_POST['pass']); 
       
          $sql = "SELECT id FROM admin WHERE usuario = '$myusername' and contrasena = '$mypassword'";
-         echo $sql;
+         echo $_POST['usuario'];
          $result = mysqli_query($db,$sql);
          $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
          $active = $row['active'];
