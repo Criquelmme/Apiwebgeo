@@ -4,7 +4,7 @@ $login = $_POST["name"];
 
 
 if($login != null){
-      $data = json_decode($json);
+      $data = json_decode($login);
       print_r($data);
     
       // $DBuser = "Claudio@mysqlmobilgeoapp";
