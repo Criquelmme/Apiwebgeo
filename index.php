@@ -1,12 +1,10 @@
 <?php
 
-$login = $_POST["login"];
+$usuario = $_POST["usuario"];
+$pass = $_POST["pass"];
 
-
-if($login != null){
-      $data = json_decode($login);
-      $usuario = $data->{'name'};
-      $pass = $data->{'pass'};
+if($usuario != null){
+    
     echo $usuario;
       $DBuser = "Claudio@mysqlmobilgeoapp";
       $DBpass = "Xxed9210";  
