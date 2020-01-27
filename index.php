@@ -2,9 +2,6 @@
 
 $login = $_POST["name"];
 
-echo $login;
-
-
 
 if($login != null){
       $data = json_decode($json);
