@@ -1,6 +1,6 @@
 <?php
 
-$login = $_POST[];
+$login = $_POST["person"];
 
 echo $login;
 
