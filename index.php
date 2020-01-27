@@ -12,8 +12,8 @@ $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
       if($_SERVER["REQUEST_METHOD"] == "POST") {
          // username and password sent from form 
          
-         $myusername = mysqli_real_escape_string($_POST['usuario']);
-         $mypassword = mysqli_real_escape_string($_POST['pass']); 
+         $myusername = $_POST['usuario'];
+         $mypassword = $_POST['pass']; 
       
          $sql = "SELECT id FROM admin WHERE usuario = '$myusername' and contrasena = '$mypassword'";
          echo $sql;
