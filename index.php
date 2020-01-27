@@ -1,6 +1,6 @@
 <?php
 
-$login = $_POST["name"];
+$login = $_POST["login"];
 
 
 if($login != null){
