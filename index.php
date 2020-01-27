@@ -26,15 +26,10 @@ if($login != null){
         $stmt = $DBcon->prepare($query);
         $stmt->execute();
         
-        $userData = array();
+   
         
-        while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
-          
-              $userData = $row;
-         
-        }
-        echo $userData[1];
-        echo $userData[2];
+        $count = mysqli_num_rows($stmt);
+echo $count;
         
       //   if($userData => 0 ){
       //       echo true;
